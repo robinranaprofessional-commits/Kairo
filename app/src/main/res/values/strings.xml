@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Kairo</string>
+    <string name="profile_button">Open profile</string>
 </resources>
