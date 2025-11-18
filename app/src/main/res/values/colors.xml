@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<color>
+<resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name= "softCream">#F4E7D1</color>
-    <color name= "darkCream">#C1AD8B</color>
+    <color name= "skinCream">#C1AD8B</color>
     <color name= "fadedCream">#9F8A6B</color>
-    <#876C50
-    <#654931
+    <color name= "clayCream">#876C50</color>
+    <color name= "darkCream">#654931</color>
 </resources>
