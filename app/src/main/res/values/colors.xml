@@ -7,4 +7,12 @@
     <color name= "fadedCream">#9F8A6B</color>
     <color name= "clayCream">#876C50</color>
     <color name= "darkCream">#654931</color>
+    <color name="cozy_bg">#14120F</color>          <!-- dark background -->
+    <color name="cozy_primary">#D9B88C</color>     <!-- light button -->
+    <color name="cozy_primary_text">#3B2B19</color>
+    <color name="cozy_secondary">#5B3A24</color>   <!-- dark button -->
+    <color name="cozy_secondary_text">#FFFFFF</color>
+    <color name="cozy_heading">#FFFFFF</color>
+    <color name="cozy_body">#B3A9A0</color>
+
 </resources>

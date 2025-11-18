@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroScreen">
+    tools:context=".IntroScreen"
+    android:background="#B3E5FC"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="25dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/appLogo"
+        android:contentDescription="App logo"
+        android:src="@drawable/appLogo"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSignIn"
+        android:text="Sign In"
+        android:background="#BA68C8"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCreateAccount"
+        android:text="Create Account"
+        android:background="BA68C8"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="15dp"/>
+
+
+
+
+</LinearLayout>
