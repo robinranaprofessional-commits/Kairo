@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7EC8FF">
+
+    <!-- Back button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_media_previous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintMarginStart="16dp"
+        app:layout_constraintMarginTop="16dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Focus Mode Timer"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="#FF869E"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintMarginTop="72dp"
+        app:layout_constraintMarginStart="32dp"
+        app:layout_constraintMarginEnd="32dp"/>
+
+    <!-- Circle placeholder for tree animation -->
+    <TextView
+        android:id="@+id/tvTreePlaceholder"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:text="placeholder\nfor growing\ntree animation"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/circle_pink"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="24dp"/>
+
+    <!-- Timer text -->
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25:00"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvTreePlaceholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="24dp" />
+
+    <!-- Pause button -->
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:background="#FFD85C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnStop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintMarginStart="24dp"
+        app:layout_constraintMarginEnd="12dp"
+        app:layout_constraintMarginBottom="32dp"/>
+
+    <!-- Stop button -->
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:background="#FF4B4B"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@id/btnPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintMarginStart="12dp"
+        app:layout_constraintMarginEnd="24dp"
+        app:layout_constraintMarginBottom="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

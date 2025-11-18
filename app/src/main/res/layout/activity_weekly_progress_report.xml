@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeeklyProgressReport"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="24sp"
+        android:layout_marginTop="48sp"
+        android:layout_marginRight="24sp"
+        android:background="@color/cardview_dark_background"
+        android:fontFamily="@font/bungee_shade"
+        android:padding="15sp"
+        android:text="Weekly Progress"
+        android:textColor="@color/white"
+        android:textSize="42sp" />
+</LinearLayout>

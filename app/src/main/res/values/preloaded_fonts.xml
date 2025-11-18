@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/agbalumo</item>
+        <item>@font/alex_brush</item>
+        <item>@font/almendra_display</item>
+        <item>@font/barriecito</item>
+        <item>@font/bungee_shade</item>
+    </array>
+</resources>
