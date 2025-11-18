@@ -1,42 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroScreen"
-    android:background="#B3E5FC"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="25dp">
+    android:background="@color/cozy_bg"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    tools:context=".IntroScreen">
 
+    <!-- Top logo + app name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_coffee"   <!-- your small icon -->
+        android:contentDescription="App icon" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Cozy Focus"
+            android:textColor="@color/cozy_heading"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Big circular image -->
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/appLogo"
-        android:contentDescription="App logo"
-        android:src="@drawable/appLogo"/>
+        android:id="@+id/hero_image"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/app_hero"   <!-- your cozy desk image -->
+    android:scaleType="centerCrop"
+    android:background="@drawable/circle_mask"
+    android:contentDescription="Cozy study scene" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSignIn"
-        android:text="Sign In"
-        android:background="#BA68C8"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="15dp"/>
+        android:gravity="center"
+        android:text="Your Cozy Study Space"
+        android:textColor="@color/cozy_heading"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Build focus, one moment at a time."
+        android:textColor="@color/cozy_body"
+        android:textSize="14sp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- CREATE ACCOUNT button -->
+    <Button
         android:id="@+id/btnCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:text="Create Account"
-        android:background="BA68C8"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="15dp"/>
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="@color/cozy_primary_text"
+        android:background="@drawable/btn_primary_cozy"
+        android:layout_marginBottom="12dp" />
 
-
-
+    <!-- SIGN IN button -->
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="@color/cozy_secondary_text"
+        android:background="@drawable/btn_secondary_cozy" />
 
 </LinearLayout>
