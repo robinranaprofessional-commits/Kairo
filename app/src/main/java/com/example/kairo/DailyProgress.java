@@ -152,5 +152,5 @@ public class MainActivity extends AppCompatActivity {
     //     if (percent >= 20) return 1;
     //     return 0;
     // }
-}
+tallala}
 */
