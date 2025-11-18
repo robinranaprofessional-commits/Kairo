@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WeeklyProgressReport"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/skinCream">
 
     <TextView
         android:id="@+id/textView"
@@ -16,8 +17,8 @@
         android:layout_marginLeft="24sp"
         android:layout_marginTop="48sp"
         android:layout_marginRight="24sp"
-        android:background="@color/cardview_dark_background"
-        android:fontFamily="@font/bungee_shade"
+        android:background="@color/fadedCream"
+        android:fontFamily="@font/amatica_sc_bold"
         android:padding="15sp"
         android:text="Weekly Progress"
         android:textColor="@color/white"
