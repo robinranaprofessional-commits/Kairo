@@ -13,9 +13,14 @@ pluginManagement {
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
+    repositories{
         google()
         mavenCentral()
+        //adding an external plugin for data representation
+        maven {
+            url = uri("https://jitpack.io")
+              }
+
     }
 }
 
