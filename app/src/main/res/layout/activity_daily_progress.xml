@@ -1,10 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DailyProgress">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FFFFFF">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Main Card -->
+    <LinearLayout
+        android:id="@+id/mainCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_margin="24dp"
+        android:background="#AEE6FF">
+
+        <!-- Top Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Greeting -->
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:background="#C9FF2F"
+                android:text="Good Morning, username"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:textAlignment="center"
+                />
+
+            <!-- Profile Button -->
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="12dp"
+                android:background="#F26186">
+
+                <ImageView
+                    android:id="@+id/avatarButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_person"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/profile_button"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Here's your progress today"
+            android:textColor="#222222"
+            android:textSize="14sp"
+            android:layout_gravity="center"/>
+
+        <!-- Stars -->
+        <LinearLayout
+            android:id="@+id/starsRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/btn_star_big_on" />
+
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:src="@android:drawable/btn_star_big_off" />
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:src="@android:drawable/btn_star_big_off" />
+        </LinearLayout>
+
+        <!-- Stats Button -->
+        <Button
+            android:id="@+id/btnViewStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="10dp"
+            android:background="#C44BDB"
+            android:text="View Stats"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:layout_gravity="center"/>
+
+        <!-- Habits -->
+        <LinearLayout
+            android:id="@+id/habitCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F3A222"
+            android:padding="16dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Focus Progress"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/habitText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:background="#B7FF4A"
+                android:text="Habit 1: 0%"
+                android:textColor="#222222"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/habitText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:background="#B7FF4A"
+                android:text="Habit 2: 0%"
+                android:textColor="#222222"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/habitText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:background="#B7FF4A"
+                android:text="Habit 3: 0%"
+                android:textColor="#222222"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Focus Button -->
+        <Button
+            android:id="@+id/btnStartFocus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="26dp"
+            android:paddingVertical="12dp"
+            android:background="#C44BDB"
+            android:text="Start Focus Session"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>
