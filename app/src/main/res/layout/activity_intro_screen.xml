@@ -79,8 +79,8 @@
         android:text="Create Account"
         android:textAllCaps="false"
         android:textSize="16sp"
-        android:textColor="@color/cozy_primary_text"
-        android:background="@drawable/btn_primary_cozy"
+        android:textColor="@color/white"
+        android:backgroundTint="@drawable/btn_primary_cozy"
         android:layout_marginBottom="12dp" />
 
     <!-- SIGN IN button -->
@@ -92,6 +92,6 @@
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textColor="@color/cozy_secondary_text"
-        android:background="@drawable/btn_secondary_cozy" />
+        android:backgroundTint="@drawable/btn_secondary_cozy" />
 
 </LinearLayout>
