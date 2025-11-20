@@ -11,18 +11,44 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/kairo" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Kairo"
+            android:textColor="@color/cozy_heading"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
         android:id="@+id/appLogo"
-        android:src="@drawable/kairo"
-        android:layout_marginTop="50dp"/>
+        android:layout_width="343dp"
+        android:layout_height="234dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/kairo" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:hint="First Name"
-        android:background="@color/cozy_primary"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:id="@+id/etFirstName"/>
 
@@ -31,31 +57,34 @@
         android:layout_height="30dp"
         android:hint="Last Name"
         android:layout_marginTop="15dp"
-        android:background="@color/cozy_primary"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center_horizontal"
         android:id="@+id/etLastName"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:id="@+id/etSignupEmail"
         android:hint="Enter Email"
-        android:background="@color/cozy_primary"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center_horizontal"
         android:layout_marginTop="15dp"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:id="@+id/etSignupPassword"
         android:hint="Create New Password"
-        android:background="@color/cozy_primary"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center_horizontal"
         android:layout_marginTop="15dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Confirm Account"
-        android:backgroundTint="@color/cozy_secondary"
-        android:textColor="#000000"
+        android:text="Create Account"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
         android:layout_marginTop="20dp" />
 
     <TextView
