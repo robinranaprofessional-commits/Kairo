@@ -47,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:hint="First Name"
+        android:textColorHint="@color/black"
         android:background="@drawable/rounded_edittext"
         android:gravity="center_horizontal"
         android:layout_marginTop="30dp"
@@ -56,6 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:hint="Last Name"
+        android:textColorHint="@color/black"
         android:layout_marginTop="15dp"
         android:background="@drawable/rounded_edittext"
         android:gravity="center_horizontal"
@@ -66,6 +68,7 @@
         android:layout_height="30dp"
         android:id="@+id/etSignupEmail"
         android:hint="Enter Email"
+        android:textColorHint="@color/black"
         android:background="@drawable/rounded_edittext"
         android:gravity="center_horizontal"
         android:layout_marginTop="15dp"/>
@@ -75,6 +78,7 @@
         android:layout_height="30dp"
         android:id="@+id/etSignupPassword"
         android:hint="Create New Password"
+        android:textColorHint="@color/black"
         android:background="@drawable/rounded_edittext"
         android:gravity="center_horizontal"
         android:layout_marginTop="15dp"/>
