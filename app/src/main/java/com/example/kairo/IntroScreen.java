@@ -1,6 +1,8 @@
 package com.example.kairo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,15 +12,22 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class IntroScreen extends AppCompatActivity {
 
+    Button btnCreateAccount, btnSignIn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_intro_screen);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        Button btnCreateAccount = findViewById(R.id.btnCreateAccount);
+        Button btnSignIn = findViewById(R.id.btnSignIn);
+
+        btnCreateAccount.setOnClickListener(v ->
+                startActivity(new Intent(this, SignupScreen.class)));
+
+        btnSignIn.setOnClickListener(v ->
+                startActivity(new Intent(this, LoginScreen.class)));
+
         });
     }
 }
