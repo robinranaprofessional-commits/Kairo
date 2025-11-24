@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="KairoLogoStyle">
+        <item name="android:layout_width">260dp</item>
+        <item name="android:layout_height">260dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+</resources>
