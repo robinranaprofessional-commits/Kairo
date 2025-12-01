@@ -41,6 +41,10 @@ public class SignupScreen extends AppCompatActivity {
                 Toast.makeText(this, "Account Created", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, LoginScreen.class));
             }
+
+            Intent intent = new Intent(SignupScreen.this, WeeklyProgressReport.class);
+            startActivity(intent);
+            finish();
         });
 
         tvGoToLogin.setOnClickListener(v ->

@@ -28,6 +28,5 @@ public class IntroScreen extends AppCompatActivity {
         btnSignIn.setOnClickListener(v ->
                 startActivity(new Intent(this, LoginScreen.class)));
 
-        });
     }
 }
