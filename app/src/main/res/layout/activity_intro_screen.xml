@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/cozy_bg"
-    android:padding="24dp"
+    android:background="@drawable/gradient_background"
+    android:padding="15dp"
     android:gravity="center_horizontal"
     tools:context=".IntroScreen">
 
@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp">
 
         <ImageView
@@ -38,8 +37,8 @@
     <ImageView
         android:id="@+id/appLogo"
         style="@style/KairoLogoStyle"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
         android:src="@drawable/kairo"/>
 
     <TextView
@@ -59,9 +58,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Better yourself with the click of a button"
-        android:textColor="@color/cozy_body"
+        android:textColor="@color/darkCream"
         android:textSize="14sp"
-        android:layout_marginBottom="32dp" />
+        android:layout_marginBottom="60dp" />
 
     <Button
         android:id="@+id/btnCreateAccount"
@@ -71,7 +70,7 @@
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textColor="@color/white"
-        android:backgroundTint="@drawable/btn_primary_cozy"
+        android:backgroundTint="@color/clayCream"
         android:layout_marginBottom="12dp" />
 
     <Button
@@ -81,6 +80,6 @@
         android:text="Sign In"
         android:textSize="16sp"
         android:textColor="@color/cozy_secondary_text"
-        android:backgroundTint="@drawable/btn_secondary_cozy" />
+        android:backgroundTint="@color/clayCream" />
 
 </LinearLayout>

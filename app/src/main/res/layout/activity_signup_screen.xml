@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignupScreen"
-    android:background="@color/cozy_bg"
+    android:background="@drawable/gradient_background"
     android:padding="15dp"
     android:orientation="vertical"
     android:gravity="center_horizontal">
@@ -16,7 +16,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp">
 
         <ImageView
@@ -39,63 +38,67 @@
     <ImageView
         android:id="@+id/appLogo"
         style="@style/KairoLogoStyle"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/kairo" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:hint="First Name"
-        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:textColorHint="@color/white"
         android:background="@drawable/rounded_edittext"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:layout_marginTop="30dp"
         android:id="@+id/etFirstName"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:hint="Last Name"
-        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:textColorHint="@color/white"
         android:layout_marginTop="15dp"
         android:background="@drawable/rounded_edittext"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:id="@+id/etLastName"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:id="@+id/etSignupEmail"
+        android:inputType="textEmailAddress"
         android:hint="Enter Email"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/white"
         android:background="@drawable/rounded_edittext"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:layout_marginTop="15dp"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:id="@+id/etSignupPassword"
+        android:inputType="textPassword"
         android:hint="Create New Password"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/white"
         android:background="@drawable/rounded_edittext"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:layout_marginTop="15dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Account"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/clayCream"
         android:textColor="@color/white"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvGoToLogin"
-        android:textColor="@color/white"
+        android:textColor="@color/darkCream"
         android:text="Already have an account? Sign In"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>

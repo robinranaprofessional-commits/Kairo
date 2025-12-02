@@ -31,6 +31,7 @@ public class SignupScreen extends AppCompatActivity {
         TextView tvGoToLogin = findViewById(R.id.tvGoToLogin);
 
         btnCreateAccount.setOnClickListener(v -> {
+
             if (etFirstName.getText().toString().isEmpty() ||
                 etLastName.getText().toString().isEmpty() ||
                 etEmail.getText().toString().isEmpty() ||

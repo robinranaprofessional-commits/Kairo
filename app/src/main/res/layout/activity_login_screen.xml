@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cozy_bg"
+    android:background="@drawable/gradient_background"
     tools:context=".LoginScreen"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="25dp">
+    android:padding="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp">
 
         <ImageView
@@ -39,29 +37,29 @@
     <ImageView
         android:id="@+id/appLogo"
         style="@style/KairoLogoStyle"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
         android:src="@drawable/kairo"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/white"
         android:id="@+id/etEmail"
-        android:layout_marginTop="100dp"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:background="@drawable/rounded_edittext"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:hint="Password"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/white"
         android:id="@+id/etPassword"
         android:inputType="textPassword"
         android:layout_marginTop="15dp"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:background="@drawable/rounded_edittext"/>
 
     <Button
@@ -69,18 +67,19 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:text="Sign In"
-        android:textSize="16sp"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/cozy_secondary_text"
-        android:backgroundTint="@drawable/btn_secondary_cozy"/>
+        android:textSize="15sp"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/clayCream"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvGoSignUp"
-        android:textColor="@color/white"
+        android:textColor="@color/darkCream"
         android:layout_marginTop="20dp"
-        android:text="New User? Create an Account"/>
+        android:text="New User? Create an Account"
+        android:textSize="15sp"/>
 
 
 

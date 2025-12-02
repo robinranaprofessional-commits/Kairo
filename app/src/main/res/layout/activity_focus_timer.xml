@@ -1,58 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7EC8FF">
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
 
-    <!-- Back button -->
-    <ImageButton
-        android:id="@+id/btnBack"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@android:color/transparent"
-        android:src="@android:drawable/ic_media_previous"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginTop="16dp" />
-
-    <!-- Title -->
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Focus Mode Timer"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:background="#FF869E"
-        android:padding="12dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintMarginTop="72dp"
-        app:layout_constraintMarginStart="32dp"
-        app:layout_constraintMarginEnd="32dp"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
 
-    <!-- Circle placeholder for tree animation -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_margin="15dp"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Focus Timer"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/clayCream"
+            android:fontFamily="@font/amatica_sc_bold"
+            android:padding="12dp"/>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tvTreePlaceholder"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:text="placeholder\nfor growing\ntree animation"
         android:gravity="center"
-        android:textSize="14sp"
+        android:textSize="15sp"
         android:textColor="@android:color/black"
-        android:background="@drawable/circle_pink"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="24dp"/>
+        android:layout_marginTop="25dp"/>
 
-    <!-- Timer text -->
     <TextView
         android:id="@+id/tvTimer"
         android:layout_width="wrap_content"
@@ -61,40 +56,35 @@
         android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@id/tvTreePlaceholder"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="24dp" />
+        android:layout_marginTop="25dp"/>
 
-    <!-- Pause button -->
-    <Button
-        android:id="@+id/btnPause"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pause"
-        android:background="#FFD85C"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btnStop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintMarginStart="24dp"
-        app:layout_constraintMarginEnd="12dp"
-        app:layout_constraintMarginBottom="32dp"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="30dp"
+        android:paddingHorizontal="25dp">
 
-    <!-- Stop button -->
-    <Button
-        android:id="@+id/btnStop"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Stop"
-        android:background="#FF4B4B"
-        android:textColor="@android:color/white"
-        app:layout_constraintStart_toEndOf="@id/btnPause"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintMarginStart="12dp"
-        app:layout_constraintMarginEnd="24dp"
-        app:layout_constraintMarginBottom="32dp"/>
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:backgroundTint="@color/clayCream"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:backgroundTint="@color/clayCream"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
