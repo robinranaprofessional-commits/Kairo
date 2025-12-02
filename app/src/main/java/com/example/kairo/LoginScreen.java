@@ -50,7 +50,7 @@ public class LoginScreen extends AppCompatActivity {
 
                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(LoginScreen.this, WeeklyProgressReport.class);
+                Intent intent = new Intent(LoginScreen.this, DailyProgress.class);
                 startActivity(intent);
                 finish();
             }
