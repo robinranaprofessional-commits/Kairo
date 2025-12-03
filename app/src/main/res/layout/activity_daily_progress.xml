@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#F3A222"
+            android:background="@color/darkCream"
             android:padding="16dp"
             android:layout_marginTop="20dp">
 
@@ -69,9 +69,10 @@
                 android:layout_height="wrap_content"
                 android:text="Today's Focus"
                 android:textStyle="bold"
-                android:textColor="#222222"
-                android:textSize="20sp"
-                android:layout_gravity="center"/>
+                android:textColor="@color/cozy_heading"
+                android:textSize="25sp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/amatica_sc_bold"/>
 
             <TextView
                 android:id="@+id/habitText1"
@@ -80,7 +81,7 @@
                 android:layout_marginTop="10dp"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="8dp"
-                android:background="#B7FF4A"
+                android:background="@color/cozy_heading"
                 android:text="Habit 1: 0%"
                 android:textColor="#222222"
                 android:textStyle="bold" />
@@ -92,7 +93,7 @@
                 android:layout_marginTop="10dp"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="8dp"
-                android:background="#B7FF4A"
+                android:background="@color/cozy_heading"
                 android:text="Habit 2: 0%"
                 android:textColor="#222222"
                 android:textStyle="bold" />
@@ -104,7 +105,7 @@
                 android:layout_marginTop="10dp"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="8dp"
-                android:background="#B7FF4A"
+                android:background="@color/cozy_heading"
                 android:text="Habit 3: 0%"
                 android:textColor="#222222"
                 android:textStyle="bold" />
