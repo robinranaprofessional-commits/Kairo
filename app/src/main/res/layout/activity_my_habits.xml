@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/skinCream"
+    android:background="@drawable/gradient_background"
     android:padding="20dp">
 
     <TextView
@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:text="My Habits"
         android:textSize="28sp"
-        android:textColor="@color/darkCream"
+        android:textColor="@color/white"
         android:gravity="center"
-        android:background="@drawable/rounded_softcream"
+        android:background="@color/clayCream"
         android:padding="16dp"
         android:layout_marginBottom="16dp" />
 
