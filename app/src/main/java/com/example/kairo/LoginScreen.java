@@ -15,6 +15,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LoginScreen extends AppCompatActivity {
 
+    EditText etEmail, etPassword;
+    Button btnSignIn;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +34,9 @@ public class LoginScreen extends AppCompatActivity {
             return;
         }
 
-        EditText etEmail = findViewById(R.id.etEmail);
-        EditText etPassword = findViewById(R.id.etPassword);
-        Button btnSignIn = findViewById(R.id.btnSignIn);
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
+        btnSignIn = findViewById(R.id.btnSignIn);
 
         btnSignIn.setOnClickListener(v -> {
             String email = etEmail.getText().toString();

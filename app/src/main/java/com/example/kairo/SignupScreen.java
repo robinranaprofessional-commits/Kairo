@@ -16,19 +16,21 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SignupScreen extends AppCompatActivity {
 
-
+    EditText etFirstName, etLastName, etEmail, etPassword;
+    Button btnCreateAccount;
+    TextView tvGoToLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_screen);
 
-        EditText etFirstName = findViewById(R.id.etFirstName);
-        EditText etLastName = findViewById(R.id.etLastName);
-        EditText etEmail = findViewById(R.id.etSignupEmail);
-        EditText etPassword = findViewById(R.id.etSignupPassword);
-        Button btnCreateAccount = findViewById(R.id.btnCreateAccount);
-        TextView tvGoToLogin = findViewById(R.id.tvGoToLogin);
+        etFirstName = findViewById(R.id.etFirstName);
+        etLastName = findViewById(R.id.etLastName);
+        etEmail = findViewById(R.id.etSignupEmail);
+        etPassword = findViewById(R.id.etSignupPassword);
+        btnCreateAccount = findViewById(R.id.btnCreateAccount);
+        tvGoToLogin = findViewById(R.id.tvGoToLogin);
 
         btnCreateAccount.setOnClickListener(v -> {
 
