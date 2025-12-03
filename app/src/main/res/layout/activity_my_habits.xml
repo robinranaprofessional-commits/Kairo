@@ -14,7 +14,7 @@
         android:textSize="28sp"
         android:textColor="@color/darkCream"
         android:gravity="center"
-        android:background="@color/softCream"
+        android:background="@drawable/rounded_softcream"
         android:padding="16dp"
         android:layout_marginBottom="16dp" />
 
@@ -30,11 +30,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add New Habit"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textAllCaps="false"
-        android:background="@color/cozy_primary_text"
         android:padding="16dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/softCream"
+        />
 
 </LinearLayout>

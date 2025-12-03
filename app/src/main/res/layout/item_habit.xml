@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:background="@color/clayCream"
+        android:background="@drawable/rounded_clay"
         android:padding="12dp">
 
         <TextView
@@ -38,7 +38,7 @@
         android:layout_width="70dp"
         android:layout_height="match_parent"
         android:layout_marginStart="8dp"
-        android:background="@color/cozy_secondary"
+        android:background="@drawable/rounded_delete"
         android:src="@android:drawable/ic_menu_delete"
         android:contentDescription="delete habit"
         app:tint="@color/white" />
