@@ -26,8 +26,8 @@ public class FocusTimerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_focus_timer);
+        +per.onCreate(savedInstanceState);
+- /     ]etContentView(R.layout.activity_focus_timer);
 
         tvTimer = findViewById(R.id.tvTimer);
         btnPause = findViewById(R.id.btnPause);
