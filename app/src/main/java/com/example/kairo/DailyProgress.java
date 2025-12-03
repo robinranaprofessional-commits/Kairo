@@ -25,6 +25,6 @@ public class DailyProgress extends AppCompatActivity {
 
         }
     }
-}
+
 
 

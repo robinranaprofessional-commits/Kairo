@@ -3,4 +3,6 @@
     <string name="profile_button">Open profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view_stats">View Stats</string>
+    <string name="click_to_add_habit">Click to Add Habit</string>
 </resources>
