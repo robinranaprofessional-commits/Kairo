@@ -30,11 +30,11 @@
             android:name=".FocusTimerActivity"
             android:exported="false" />
         <activity
+            android:name=".MyHabitsActivity"
+            android:exported="false"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
-
-            <activity android:name=".MyHabitsActivity" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
