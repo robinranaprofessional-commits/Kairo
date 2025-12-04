@@ -1,7 +1,6 @@
 package com.example.kairo;
 
 
-
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,8 +22,8 @@ public class DailyProgress extends AppCompatActivity {
         btnViewStats = findViewById(R.id.btnViewStats);
         tvAddHabit = findViewById(R.id.tvAddHabit);
 
-        }
     }
+}
 
 
 

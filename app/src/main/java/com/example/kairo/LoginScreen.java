@@ -7,11 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class LoginScreen extends AppCompatActivity {
 
@@ -27,8 +23,7 @@ public class LoginScreen extends AppCompatActivity {
         SharedPreferences loginPref = getSharedPreferences("UserData", MODE_PRIVATE);
         boolean isLoggedIn = loginPref.getBoolean("isLoggedIn", false);
 
-        if (isLoggedIn)
-        {
+        if (isLoggedIn) {
             startActivity(new Intent(LoginScreen.this, WeeklyProgressReport.class));
             finish();
             return;

@@ -1,12 +1,13 @@
-package com.example.kairo;
+package com.example.kairo.Fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+
+import com.example.kairo.R;
 
 
 public class FocusTimer_1 extends Fragment {

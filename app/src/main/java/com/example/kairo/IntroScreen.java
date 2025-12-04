@@ -4,11 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class IntroScreen extends AppCompatActivity {
 
@@ -22,11 +18,9 @@ public class IntroScreen extends AppCompatActivity {
         btnCreateAccount = findViewById(R.id.btnCreateAccount);
         btnSignIn = findViewById(R.id.btnSignIn);
 
-        btnCreateAccount.setOnClickListener(v ->
-                startActivity(new Intent(this, SignupScreen.class)));
+        btnCreateAccount.setOnClickListener(v -> startActivity(new Intent(this, SignupScreen.class)));
 
-        btnSignIn.setOnClickListener(v ->
-                startActivity(new Intent(this, LoginScreen.class)));
+        btnSignIn.setOnClickListener(v -> startActivity(new Intent(this, LoginScreen.class)));
 
     }
 }
