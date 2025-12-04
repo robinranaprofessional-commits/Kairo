@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 // this activity shows the list of habits
-public class MyHabitsActivity extends AppCompatActivity
+public class MyHabitsActivity extends Activity
         implements HabitAdapter.OnDeleteClickListener {
 
     private RecyclerView rvHabits;
@@ -29,12 +29,12 @@ public class MyHabitsActivity extends AppCompatActivity
         rvHabits = findViewById(R.id.rvHabits);
         btnAddHabit = findViewById(R.id.btnAddHabit);
 
-        // starting habits so the list isn't empty
+        // dummy habits so the list isn't empty
         habitList = new ArrayList<>();
-        habitList.add(new Habit("Habit 1", false));
-        habitList.add(new Habit("Habit 2", false));
-        habitList.add(new Habit("New Habit Placeholder", true));
-        habitList.add(new Habit("New Habit Placeholder", true));
+        habitList.add(new Habit("Drink Water", false));
+        habitList.add(new Habit("Read for 15 Minutes", false));
+        habitList.add(new Habit("Morning Stretch", false));
+        habitList.add(new Habit("Practice Coding", false));
 
         // set up the recycler view
         adapter = new HabitAdapter(habitList, this);
