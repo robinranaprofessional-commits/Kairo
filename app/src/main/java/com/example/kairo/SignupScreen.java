@@ -21,8 +21,7 @@ public class SignupScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_screen);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("kairo_prefs", MODE_PRIVATE);
-        SharedPreferences.Editor sh_editor = sharedPreferences.edit();
+        SharedPreferences pref = getSharedPreferences("kairo_prefs", MODE_PRIVATE);
 
         etFirstName = findViewById(R.id.etFirstName);
         etLastName = findViewById(R.id.etLastName);
@@ -32,21 +31,25 @@ public class SignupScreen extends AppCompatActivity {
         tvGoToLogin = findViewById(R.id.tvGoToLogin);
 
         btnCreateAccount.setOnClickListener(v -> {
+            String first = etFirstName.getText().toString();
+            String last = etLastName.getText().toString();
+            String email = etEmail.getText().toString();
+            String password = etPassword.getText().toString();
 
-            if (etFirstName.getText().toString().isEmpty() ||
-                    etLastName.getText().toString().isEmpty() ||
-                    etEmail.getText().toString().isEmpty() ||
-                    etPassword.getText().toString().isEmpty()) {
-                Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "Account Created", Toast.LENGTH_SHORT).show();
-                sh_editor.putBoolean("is_existing_user",true);
-                sh_editor.apply();
-                startActivity(new Intent(this, LoginScreen.class));
+            if (first.isEmpty() || last.isEmpty() || email.isEmpty() || password.isEmpty())
+            {
+                Toast.makeText(this, "Please enter all fields.", Toast.LENGTH_SHORT).show();
+                return;
             }
 
-            Intent intent = new Intent(SignupScreen.this, MainActivity.class);
-            startActivity(intent);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putString("signup_email", email);
+            edit.putString("signup_password", password);
+            edit.apply();
+
+            Toast.makeText(this, "Account Created", Toast.LENGTH_SHORT);
+
+            startActivity(new Intent(this, LoginScreen.class));
             finish();
         });
 

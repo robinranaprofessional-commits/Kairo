@@ -16,11 +16,6 @@ public class IntroScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_screen);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("kairo_prefs", MODE_PRIVATE);
-        if(sharedPreferences.getBoolean("is_existing_user", false)){
-            startActivity(new Intent(this, LoginScreen.class));
-        }
-
         btnCreateAccount = findViewById(R.id.btnCreateAccount);
         btnSignIn = findViewById(R.id.btnSignIn);
 
