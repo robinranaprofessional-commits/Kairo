@@ -21,10 +21,12 @@ public class LoginScreen extends AppCompatActivity {
         setContentView(R.layout.activity_login_screen);
 
         SharedPreferences loginPref = getSharedPreferences("UserData", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("kairo_prefs", MODE_PRIVATE);
+        SharedPreferences.Editor sh_editor = sharedPreferences.edit();
         boolean isLoggedIn = loginPref.getBoolean("isLoggedIn", false);
 
         if (isLoggedIn) {
-            startActivity(new Intent(LoginScreen.this, WeeklyProgressReport.class));
+            startActivity(new Intent(LoginScreen.this, MainActivity.class));
             finish();
             return;
         }
@@ -48,8 +50,10 @@ public class LoginScreen extends AppCompatActivity {
                 editor.apply();
 
                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
+                sh_editor.putBoolean("is_existing_user", true);
+                sh_editor.apply();
 
-                Intent intent = new Intent(LoginScreen.this, DailyProgress.class);
+                Intent intent = new Intent(LoginScreen.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
