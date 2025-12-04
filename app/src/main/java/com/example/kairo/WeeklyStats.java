@@ -53,7 +53,7 @@ public class WeeklyStats {
         return max;
     }
 
-    // ======== GETTER METHODS ========
+    //  GETTER METHODS
     public List<Float> getFocusHours() {
         return focusHours;
     }
