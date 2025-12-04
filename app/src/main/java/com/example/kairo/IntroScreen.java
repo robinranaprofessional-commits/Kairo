@@ -19,8 +19,8 @@ public class IntroScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_screen);
 
-        Button btnCreateAccount = findViewById(R.id.btnCreateAccount);
-        Button btnSignIn = findViewById(R.id.btnSignIn);
+        btnCreateAccount = findViewById(R.id.btnCreateAccount);
+        btnSignIn = findViewById(R.id.btnSignIn);
 
         btnCreateAccount.setOnClickListener(v ->
                 startActivity(new Intent(this, SignupScreen.class)));
