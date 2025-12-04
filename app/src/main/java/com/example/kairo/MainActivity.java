@@ -40,12 +40,15 @@ public class MainActivity extends AppCompatActivity {
             switch (position) {
                 case 0:
                     tab.setText("Daily");
+                    tab.setIcon(R.drawable.dailyfocusicon);
                     break;
                 case 1:
                     tab.setText("Weekly");
+                    tab.setIcon(R.drawable.weeklyanalysisicon);
                     break;
                 case 2:
                     tab.setText("Focus");
+                    tab.setIcon(R.drawable.focustimericon);
                     break;
             }
         }).attach();
