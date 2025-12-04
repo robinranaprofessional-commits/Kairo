@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_timer"
+        android:title="Timer"
+        android:icon="@drawable/dailyfocusicon" />
+
+    <item
+        android:id="@+id/nav_habits"
+        android:title="Habits"
+        android:icon="@drawable/dailyfocusicon" />
+
+    <item
+        android:id="@+id/nav_stats"
+        android:title="Stats"
+        android:icon="@drawable/weeklyanalysisicon" />
+</menu>
