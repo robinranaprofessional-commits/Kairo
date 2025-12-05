@@ -5,18 +5,16 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class LoginScreen extends AppCompatActivity {
 
     EditText etEmail, etPassword;
     Button btnSignIn;
+    TextView tvGoSignUp;
 
 
     @Override
@@ -24,12 +22,11 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
-        SharedPreferences loginPref = getSharedPreferences("UserData", MODE_PRIVATE);
+        SharedPreferences loginPref = getSharedPreferences("kairo_prefs", MODE_PRIVATE);
         boolean isLoggedIn = loginPref.getBoolean("isLoggedIn", false);
 
-        if (isLoggedIn)
-        {
-            startActivity(new Intent(LoginScreen.this, WeeklyProgressReport.class));
+        if (isLoggedIn) {
+            startActivity(new Intent(LoginScreen.this, MainActivity.class));
             finish();
             return;
         }
@@ -37,27 +34,42 @@ public class LoginScreen extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         btnSignIn = findViewById(R.id.btnSignIn);
+        tvGoSignUp = findViewById(R.id.tvGoSignUp);
 
         btnSignIn.setOnClickListener(v -> {
             String email = etEmail.getText().toString();
             String password = etPassword.getText().toString();
 
             if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please complete all fields", Toast.LENGTH_SHORT).show();
-            } else {
-                SharedPreferences.Editor editor = loginPref.edit();
+                Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-                editor.putString("email", email);
-                editor.putString("password", password);
-                editor.putBoolean("isLoggedIn", true);
-                editor.apply();
+            String savedEmail = loginPref.getString("signup_email", null);
+            String savedPassword = loginPref.getString("signup_password", null);
+
+            if (savedEmail == null || savedPassword == null) {
+                Toast.makeText(this, "No account found. Please create an account.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (email.equals(savedEmail) && password.equals(savedPassword)) {
+                loginPref.edit().putBoolean("isLoggedIn", true).apply();
 
                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(LoginScreen.this, DailyProgress.class);
-                startActivity(intent);
+                startActivity(new Intent(LoginScreen.this, MainActivity.class));
                 finish();
             }
+            else
+            {
+                Toast.makeText(this, "Incorrect email/password", Toast.LENGTH_SHORT).show();
+            }
         });
+
+        tvGoSignUp.setOnClickListener(v ->{
+            startActivity(new Intent(LoginScreen.this, SignupScreen.class));
+        });
+
     }
 }

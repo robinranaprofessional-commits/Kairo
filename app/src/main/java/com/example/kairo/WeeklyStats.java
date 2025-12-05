@@ -1,6 +1,5 @@
 package com.example.kairo;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -53,7 +52,7 @@ public class WeeklyStats {
         return max;
     }
 
-    // ======== GETTER METHODS ========
+    //  GETTER METHODS
     public List<Float> getFocusHours() {
         return focusHours;
     }

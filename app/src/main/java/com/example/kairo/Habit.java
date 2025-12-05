@@ -3,8 +3,8 @@ package com.example.kairo;
 // class for one habit row
 public class Habit {
 
-    private String name;
-    private boolean placeholder;
+    private final String name;
+    private final boolean placeholder;
 
     public Habit(String name, boolean placeholder) {
         this.name = name;

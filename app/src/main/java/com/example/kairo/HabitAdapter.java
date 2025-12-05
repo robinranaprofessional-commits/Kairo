@@ -14,32 +14,11 @@ import java.util.ArrayList;
 // adapter for showing all the habits in the list
 public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.HabitViewHolder> {
 
-    // lets the activity know when delete is pressed
-    public interface OnDeleteClickListener {
-        void onDeleteClick(int position);
-    }
-
-    private ArrayList<Habit> items;
-    private OnDeleteClickListener deleteListener;
-
+    private final ArrayList<Habit> items;
+    private final OnDeleteClickListener deleteListener;
     public HabitAdapter(ArrayList<Habit> items, OnDeleteClickListener deleteListener) {
         this.items = items;
         this.deleteListener = deleteListener;
-    }
-
-    // holds the views for one row
-    public static class HabitViewHolder extends RecyclerView.ViewHolder {
-
-        TextView tvName;
-        TextView tvStreak;
-        ImageButton btnDelete;
-
-        public HabitViewHolder(@NonNull View itemView) {
-            super(itemView);
-            tvName = itemView.findViewById(R.id.tvHabitName);
-            tvStreak = itemView.findViewById(R.id.tvStreakLabel);
-            btnDelete = itemView.findViewById(R.id.btnDelete);
-        }
     }
 
     @NonNull
@@ -81,5 +60,25 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.HabitViewHol
     @Override
     public int getItemCount() {
         return items.size();
+    }
+
+    // lets the activity know when delete is pressed
+    public interface OnDeleteClickListener {
+        void onDeleteClick(int position);
+    }
+
+    // holds the views for one row
+    public static class HabitViewHolder extends RecyclerView.ViewHolder {
+
+        TextView tvName;
+        TextView tvStreak;
+        ImageButton btnDelete;
+
+        public HabitViewHolder(@NonNull View itemView) {
+            super(itemView);
+            tvName = itemView.findViewById(R.id.tvHabitName);
+            tvStreak = itemView.findViewById(R.id.tvStreakLabel);
+            btnDelete = itemView.findViewById(R.id.btnDelete);
+        }
     }
 }
