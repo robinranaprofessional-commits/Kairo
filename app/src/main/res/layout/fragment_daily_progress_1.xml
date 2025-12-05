@@ -32,17 +32,34 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvGreeting"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to Kairo\n username"
-        android:background="@color/clayCream"
-        android:textColor="@color/white"
-        android:fontFamily="@font/amatica_sc_bold"
-        android:textSize="32dp"
-        android:textStyle="bold"
-        android:textAlignment="center" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@color/clayCream">
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amatica_sc_bold"
+            android:text="Welcome to Kairo"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvName"
+            android:fontFamily="@font/amatica_sc_bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="32sp"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvSubtitle"
@@ -53,7 +70,7 @@
         android:fontFamily="@font/amatica_sc_bold"
         android:background="@color/clayCream"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:gravity="center"/>
 
     <LinearLayout

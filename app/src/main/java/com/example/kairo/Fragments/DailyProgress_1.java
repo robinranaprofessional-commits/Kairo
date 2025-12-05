@@ -1,11 +1,14 @@
 package com.example.kairo.Fragments;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -16,11 +19,14 @@ import com.example.kairo.MyHabitsActivity;
 import com.example.kairo.R;
 import com.example.kairo.WeeklyProgressReport;
 
+import org.w3c.dom.Text;
+
 public class DailyProgress_1 extends Fragment {
 
     private Button btnAddHabit;
     private Button btnStartSession;
     private Button btnViewStats;
+    private TextView tvName;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -33,6 +39,13 @@ public class DailyProgress_1 extends Fragment {
         btnAddHabit = view.findViewById(R.id.btnAddHabit);
         btnStartSession = view.findViewById(R.id.btnStartSession);
         btnViewStats = view.findViewById(R.id.btnViewStats);
+        tvName = view.findViewById(R.id.tvName);
+
+        SharedPreferences prefs = requireActivity().getSharedPreferences("kairo_prefs", Context.MODE_PRIVATE);
+        String first = prefs.getString("signup_first", "");
+        tvName.setText(first);
+
+
 
         btnAddHabit.setOnClickListener(v -> {
             // Only this one goes to a new Activity
