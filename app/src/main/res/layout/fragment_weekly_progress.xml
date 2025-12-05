@@ -35,13 +35,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            android:backgroundTint="@color/darkCream"/>
     </LinearLayout>
 
     <!-- TITLE -->
@@ -127,17 +120,4 @@
             android:textSize="16sp"
             android:textColor="@color/darkCream" />
     </LinearLayout>
-
-    <!-- SHARE BUTTON -->
-    <Button
-        android:id="@+id/btn_share_progress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Share Progress"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/clayCream"
-        android:paddingVertical="10dp" />
-
 </LinearLayout>

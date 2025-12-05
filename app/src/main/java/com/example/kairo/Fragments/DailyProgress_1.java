@@ -13,11 +13,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+
 import com.example.kairo.FocusTimerActivity;
 import com.example.kairo.IntroScreen;
+import com.example.kairo.LoginScreen;
 import com.example.kairo.MainActivity;
 import com.example.kairo.MyHabitsActivity;
 import com.example.kairo.R;
+import com.example.kairo.SignupScreen;
 import com.example.kairo.WeeklyProgressReport;
 
 import org.w3c.dom.Text;
@@ -48,15 +51,9 @@ public class DailyProgress_1 extends Fragment {
         String first = prefs.getString("signup_first", "");
         tvName.setText(first);
 
-        btnLogout.setOnClickListener(v -> {
-            SharedPreferences logoutPrefs = requireActivity().getSharedPreferences("kairo_prefs", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = logoutPrefs.edit();
-            editor.clear();
-            editor.apply();
-
+        btnLogout.setOnClickListener(v ->{
             Intent intent = new Intent(requireActivity(), IntroScreen.class);
             startActivity(intent);
-            requireActivity().finish();
         });
 
         btnAddHabit.setOnClickListener(v -> {

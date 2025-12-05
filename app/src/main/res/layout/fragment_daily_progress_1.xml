@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Logout"
-            android:backgroundTint="@color/darkCream"/>
+            android:backgroundTint="@color/clayCream"/>
     </LinearLayout>
 
     <LinearLayout
@@ -75,10 +75,10 @@
 
     <TextView
         android:id="@+id/tvSubtitle"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
-        android:text="Here's your progress today"
+        android:text="Here is your progress today"
         android:fontFamily="@font/amatica_sc_bold"
         android:background="@color/clayCream"
         android:textColor="@color/white"

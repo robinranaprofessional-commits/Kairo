@@ -37,11 +37,11 @@
             android:layout_weight="1"/>
 
         <Button
-            android:id="@+id/btnLogout"
+            android:id="@+id/btnNewAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Logout"
-            android:backgroundTint="@color/darkCream"/>
+            android:text="New Account"
+            android:backgroundTint="@color/clayCream"/>
     </LinearLayout>
 
     <TextView
@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pause"
-            android:backgroundTint="@color/clayCream"
+            android:backgroundTint="@color/darkCream"
             android:textColor="@color/white"
             android:layout_marginEnd="10dp"/>
 
@@ -101,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Stop"
-            android:backgroundTint="@color/clayCream"
+            android:backgroundTint="@color/darkCream"
             android:textColor="@color/white"
             android:layout_marginStart="10dp"/>
 

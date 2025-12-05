@@ -17,7 +17,7 @@ import com.example.kairo.R;
 
 public class FocusTimer_1 extends Fragment {
 
-    Button btnLogout;
+    Button btnNewAccount;
 
 
     @Override
@@ -25,9 +25,9 @@ public class FocusTimer_1 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_focus_timer_1, container, false);
 
-        btnLogout = view.findViewById(R.id.btnLogout);
+        btnNewAccount = view.findViewById(R.id.btnNewAccount);
 
-        btnLogout.setOnClickListener(v -> {
+        btnNewAccount.setOnClickListener(v -> {
             SharedPreferences logoutPrefs = requireActivity().getSharedPreferences("kairo_prefs", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = logoutPrefs.edit();
             editor.clear();
