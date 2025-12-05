@@ -7,7 +7,6 @@
     android:background="@drawable/gradient_background"
     tools:context=".LoginScreen"
     android:gravity="center_horizontal"
-    android:layout_gravity="center_vertical"
     android:orientation="vertical"
     android:padding="15dp" >
 
