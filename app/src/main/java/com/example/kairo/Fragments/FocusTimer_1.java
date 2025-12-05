@@ -23,7 +23,7 @@ public class FocusTimer_1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_weekly_progress, container, false);
+        View view = inflater.inflate(R.layout.fragment_focus_timer_1, container, false);
 
         btnLogout = view.findViewById(R.id.btnLogout);
 
