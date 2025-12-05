@@ -2,7 +2,6 @@ package com.example.kairo;
 
 // class for one habit row
 public class Habit {
-
     private String name;
     private boolean placeholder;
 
@@ -11,19 +10,9 @@ public class Habit {
         this.placeholder = placeholder;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public boolean isPlaceholder() {
-        return placeholder;
-    }
-
-    public void setPlaceholder(boolean placeholder) {
-        this.placeholder = placeholder;
-    }
+    public boolean isPlaceholder() { return placeholder; }
+    public void setPlaceholder(boolean placeholder) { this.placeholder = placeholder; }
 }

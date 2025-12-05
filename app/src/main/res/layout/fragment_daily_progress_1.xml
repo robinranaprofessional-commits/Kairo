@@ -30,7 +30,7 @@
             android:textColor="@color/cozy_heading"
             android:textSize="18sp"
             android:textStyle="bold"/>
-        
+
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -88,89 +88,68 @@
     <LinearLayout
         android:id="@+id/habitCard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="323dp"
+        android:layout_marginTop="20dp"
         android:background="@color/softCream"
-        android:padding="15dp"
-        android:layout_marginTop="20dp">
+        android:orientation="vertical"
+        android:padding="15dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Today's Focus"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_gravity="center"/>
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/habitText1"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTodayHabits"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingHorizontal="15dp"
-            android:paddingVertical="15dp"
-            android:text="Habit 1:" />
-
-        <TextView
-            android:id="@+id/habitText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingHorizontal="15dp"
-            android:paddingVertical="15dp"
-            android:text="Habit 2:" />
-
-        <TextView
-            android:id="@+id/habitText3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingHorizontal="15dp"
-            android:paddingVertical="15dp"
-            android:text="Habit 3:" />
+            android:layout_marginTop="8dp"
+            android:padding="4dp" />
 
         <Button
             android:id="@+id/btnAddHabit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/click_to_add_habit"
             android:layout_gravity="center"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="8dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/darkCream"
-            android:textColor="@color/white"/>
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="@string/click_to_add_habit"
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="77dp"
+        android:layout_marginTop="35dp"
         android:gravity="center"
-        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
         android:paddingHorizontal="25dp">
 
         <Button
             android:id="@+id/btnStartSession"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Start Session"
-            android:textColor="@color/white"
             android:layout_margin="15dp"
             android:backgroundTint="@color/darkCream"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="Start Session"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnViewStats"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/darkCream"
+            android:gravity="center"
             android:paddingVertical="10dp"
             android:text="@string/view_stats"
-            android:backgroundTint="@color/darkCream"
-            android:textColor="@color/white"
-            android:gravity="center"/>
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </LinearLayout>
-

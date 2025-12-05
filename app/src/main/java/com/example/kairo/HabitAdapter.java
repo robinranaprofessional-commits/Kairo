@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-// adapter for showing all the habits in the list
 public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.HabitViewHolder> {
 
     private final ArrayList<Habit> items;
@@ -48,31 +47,24 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.HabitViewHol
 
         holder.btnDelete.setOnClickListener(v -> {
             int pos = holder.getAdapterPosition();
-            if (pos != RecyclerView.NO_POSITION) {
+            if (pos != RecyclerView.NO_POSITION && deleteListener != null) {
                 deleteListener.onDeleteClick(pos);
             }
         });
 
         holder.itemView.setOnClickListener(v -> {
             int pos = holder.getAdapterPosition();
-            if (pos != RecyclerView.NO_POSITION) {
+            if (pos != RecyclerView.NO_POSITION && itemClickListener != null) {
                 itemClickListener.onItemClick(pos);
             }
         });
     }
 
     @Override
-    public int getItemCount() {
-        return items.size();
-    }
+    public int getItemCount() { return items.size(); }
 
-    public interface OnDeleteClickListener {
-        void onDeleteClick(int position);
-    }
-
-    public interface OnItemClickListener {
-        void onItemClick(int position);
-    }
+    public interface OnDeleteClickListener { void onDeleteClick(int position); }
+    public interface OnItemClickListener { void onItemClick(int position); }
 
     public void addItem(Habit habit) {
         items.add(habit);
@@ -80,13 +72,17 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.HabitViewHol
     }
 
     public void updateItem(int position, Habit habit) {
-        items.set(position, habit);
-        notifyItemChanged(position);
+        if (position >= 0 && position < items.size()) {
+            items.set(position, habit);
+            notifyItemChanged(position);
+        }
     }
 
     public void removeItem(int position) {
-        items.remove(position);
-        notifyItemRemoved(position);
+        if (position >= 0 && position < items.size()) {
+            items.remove(position);
+            notifyItemRemoved(position);
+        }
     }
 
     public static class HabitViewHolder extends RecyclerView.ViewHolder {
