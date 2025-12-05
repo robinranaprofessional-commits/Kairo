@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
 
@@ -55,5 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
         // DEFAULT TAB = DailyProgress
         viewPager.setCurrentItem(0, false);
+
     }
+    public void goToPage(int pageIndex) {
+        ViewPager2 viewPager = findViewById(R.id.viewPager);
+        viewPager.setCurrentItem(pageIndex, true);
+    }
+
 }

@@ -43,6 +43,8 @@ public class SignupScreen extends AppCompatActivity {
             }
 
             SharedPreferences.Editor edit = pref.edit();
+            edit.putString("signup_first", first);
+            edit.putString("signup_last", last);
             edit.putString("signup_email", email);
             edit.putString("signup_password", password);
             edit.apply();

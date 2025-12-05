@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="24dp">
+        android:layout_marginBottom="20dp">
 
         <ImageView
             android:id="@+id/app_icon"
@@ -29,20 +29,49 @@
             android:text="Kairo"
             android:textColor="@color/cozy_heading"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:backgroundTint="@color/darkCream"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvGreeting"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to Kairo\n username"
-        android:background="@color/clayCream"
-        android:textColor="@color/white"
-        android:fontFamily="@font/amatica_sc_bold"
-        android:textSize="32dp"
-        android:textStyle="bold"
-        android:textAlignment="center" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@color/clayCream">
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amatica_sc_bold"
+            android:text="Welcome to Kairo"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvName"
+            android:fontFamily="@font/amatica_sc_bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="32sp"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvSubtitle"
@@ -53,7 +82,7 @@
         android:fontFamily="@font/amatica_sc_bold"
         android:background="@color/clayCream"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:gravity="center"/>
 
     <LinearLayout
@@ -111,8 +140,7 @@
             android:paddingVertical="8dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/darkCream"
-            android:textColor="@color/white"
-            android:textAllCaps="false"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <LinearLayout
@@ -131,7 +159,6 @@
             android:textColor="@color/white"
             android:layout_margin="15dp"
             android:backgroundTint="@color/darkCream"
-            android:textAllCaps="false"
             android:gravity="center"/>
 
         <Button
@@ -142,7 +169,6 @@
             android:text="@string/view_stats"
             android:backgroundTint="@color/darkCream"
             android:textColor="@color/white"
-            android:textAllCaps="false"
             android:gravity="center"/>
     </LinearLayout>
 
