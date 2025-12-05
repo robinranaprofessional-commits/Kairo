@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.kairo.IntroScreen;
@@ -18,22 +20,27 @@ public class WeeklyProgress_1 extends Fragment {
 
     Button btnLogout;
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_weekly_progress, container, false);
 
         btnLogout = view.findViewById(R.id.btnLogout);
 
         btnLogout.setOnClickListener(v -> {
-            SharedPreferences logoutPrefs = requireActivity().getSharedPreferences("kairo_prefs", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = logoutPrefs.edit();
-            editor.clear();
-            editor.apply();
+            // Use the SAME shared prefs file your entire app uses
+            SharedPreferences logoutPrefs = requireActivity()
+                    .getSharedPreferences("KairoPrefs", Context.MODE_PRIVATE);
 
+            logoutPrefs.edit().clear().apply();
+
+            // Go to intro screen
             Intent intent = new Intent(requireActivity(), IntroScreen.class);
             startActivity(intent);
+
+            // Close MainActivity and all fragments
             requireActivity().finish();
         });
 
