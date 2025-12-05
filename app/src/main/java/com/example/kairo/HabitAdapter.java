@@ -16,15 +16,19 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.HabitViewHol
 
     private final ArrayList<Habit> items;
     private final OnDeleteClickListener deleteListener;
-    public HabitAdapter(ArrayList<Habit> items, OnDeleteClickListener deleteListener) {
+    private final OnItemClickListener itemClickListener;
+
+    public HabitAdapter(ArrayList<Habit> items,
+                        OnDeleteClickListener deleteListener,
+                        OnItemClickListener itemClickListener) {
         this.items = items;
         this.deleteListener = deleteListener;
+        this.itemClickListener = itemClickListener;
     }
 
     @NonNull
     @Override
     public HabitViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // make one row from the xml layout
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_habit, parent, false);
         return new HabitViewHolder(view);
@@ -34,7 +38,6 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.HabitViewHol
     public void onBindViewHolder(@NonNull HabitViewHolder holder, int position) {
         Habit habit = items.get(position);
 
-        // show placeholder text or the real habit
         if (habit.isPlaceholder()) {
             holder.tvName.setText("New Habit Placeholder");
             holder.tvStreak.setText("");
@@ -43,16 +46,17 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.HabitViewHol
             holder.tvStreak.setText("Streak Count:");
         }
 
-        // handle delete button for this row
-        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (deleteListener != null) {
-                    int pos = holder.getAdapterPosition();
-                    if (pos != RecyclerView.NO_POSITION) {
-                        deleteListener.onDeleteClick(pos);
-                    }
-                }
+        holder.btnDelete.setOnClickListener(v -> {
+            int pos = holder.getAdapterPosition();
+            if (pos != RecyclerView.NO_POSITION) {
+                deleteListener.onDeleteClick(pos);
+            }
+        });
+
+        holder.itemView.setOnClickListener(v -> {
+            int pos = holder.getAdapterPosition();
+            if (pos != RecyclerView.NO_POSITION) {
+                itemClickListener.onItemClick(pos);
             }
         });
     }
@@ -62,14 +66,30 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.HabitViewHol
         return items.size();
     }
 
-    // lets the activity know when delete is pressed
     public interface OnDeleteClickListener {
         void onDeleteClick(int position);
     }
 
-    // holds the views for one row
-    public static class HabitViewHolder extends RecyclerView.ViewHolder {
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
 
+    public void addItem(Habit habit) {
+        items.add(habit);
+        notifyItemInserted(items.size() - 1);
+    }
+
+    public void updateItem(int position, Habit habit) {
+        items.set(position, habit);
+        notifyItemChanged(position);
+    }
+
+    public void removeItem(int position) {
+        items.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public static class HabitViewHolder extends RecyclerView.ViewHolder {
         TextView tvName;
         TextView tvStreak;
         ImageButton btnDelete;
