@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="24dp">
+        android:layout_marginBottom="20dp">
 
         <ImageView
             android:id="@+id/app_icon"
@@ -29,7 +29,19 @@
             android:text="Kairo"
             android:textColor="@color/cozy_heading"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:backgroundTint="@color/darkCream"/>
     </LinearLayout>
 
     <LinearLayout
@@ -128,8 +140,7 @@
             android:paddingVertical="8dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/darkCream"
-            android:textColor="@color/white"
-            android:textAllCaps="false"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <LinearLayout
@@ -148,7 +159,6 @@
             android:textColor="@color/white"
             android:layout_margin="15dp"
             android:backgroundTint="@color/darkCream"
-            android:textAllCaps="false"
             android:gravity="center"/>
 
         <Button
@@ -159,7 +169,6 @@
             android:text="@string/view_stats"
             android:backgroundTint="@color/darkCream"
             android:textColor="@color/white"
-            android:textAllCaps="false"
             android:gravity="center"/>
     </LinearLayout>
 

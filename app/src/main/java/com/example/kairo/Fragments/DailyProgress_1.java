@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.kairo.FocusTimerActivity;
+import com.example.kairo.IntroScreen;
 import com.example.kairo.MainActivity;
 import com.example.kairo.MyHabitsActivity;
 import com.example.kairo.R;
@@ -26,6 +27,7 @@ public class DailyProgress_1 extends Fragment {
     private Button btnAddHabit;
     private Button btnStartSession;
     private Button btnViewStats;
+    private Button btnLogout;
     private TextView tvName;
 
     @Override
@@ -36,6 +38,7 @@ public class DailyProgress_1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_daily_progress_1, container, false);
 
         // Initialize buttons
+        btnLogout = view.findViewById(R.id.btnLogout);
         btnAddHabit = view.findViewById(R.id.btnAddHabit);
         btnStartSession = view.findViewById(R.id.btnStartSession);
         btnViewStats = view.findViewById(R.id.btnViewStats);
@@ -45,7 +48,16 @@ public class DailyProgress_1 extends Fragment {
         String first = prefs.getString("signup_first", "");
         tvName.setText(first);
 
+        btnLogout.setOnClickListener(v -> {
+            SharedPreferences logoutPrefs = requireActivity().getSharedPreferences("kairo_prefs", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = logoutPrefs.edit();
+            editor.clear();
+            editor.apply();
 
+            Intent intent = new Intent(requireActivity(), IntroScreen.class);
+            startActivity(intent);
+            requireActivity().finish();
+        });
 
         btnAddHabit.setOnClickListener(v -> {
             // Only this one goes to a new Activity
