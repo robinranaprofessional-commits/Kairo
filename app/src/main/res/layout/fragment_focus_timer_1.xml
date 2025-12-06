@@ -75,41 +75,45 @@
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:layout_marginTop="25dp"/>
-    
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="18dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="30dp"
-        android:gravity="center"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
         android:paddingHorizontal="25dp">
 
         <Button
             android:id="@+id/btnPause"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:backgroundTint="@color/darkCream"
+            android:layout_marginEnd="12dp"
             android:text="Pause"
-            android:textColor="@color/white" />
+            android:background="@drawable/rounded_clay"
+            android:backgroundTint="@color/clayCream"/>
 
         <Button
             android:id="@+id/btnStop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="@color/darkCream"
+            android:layout_marginStart="12dp"
             android:text="Stop"
-            android:textColor="@color/white" />
+            android:background="@drawable/rounded_clay"
+            />
 
     </LinearLayout>
 
+
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Start Focus Session"
+        android:backgroundTint="@color/clayCream"
+         />
+
 
 </LinearLayout>
