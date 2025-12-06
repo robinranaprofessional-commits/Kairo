@@ -109,8 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:paddingHorizontal="15dp"
-            android:paddingVertical="15dp"
-            android:text="Habit 1:" />
+            android:paddingVertical="15dp"/>
 
         <TextView
             android:id="@+id/habitText2"
@@ -118,8 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:paddingHorizontal="15dp"
-            android:paddingVertical="15dp"
-            android:text="Habit 2:" />
+            android:paddingVertical="15dp"/>
 
         <TextView
             android:id="@+id/habitText3"
@@ -127,14 +125,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:paddingHorizontal="15dp"
-            android:paddingVertical="15dp"
-            android:text="Habit 3:" />
+            android:paddingVertical="15dp"/>
 
         <Button
             android:id="@+id/btnAddHabit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/click_to_add_habit"
+            android:text="Add Habits"
             android:layout_gravity="center"
             android:paddingHorizontal="20dp"
             android:paddingVertical="8dp"

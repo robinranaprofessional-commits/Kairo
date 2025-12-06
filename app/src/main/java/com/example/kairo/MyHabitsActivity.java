@@ -8,6 +8,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,6 +22,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -48,11 +53,25 @@ public class MyHabitsActivity extends Activity
         rvHabits = findViewById(R.id.rvHabits);
         btnAddHabit = findViewById(R.id.btnAddHabit);
 
-        habitList = new ArrayList<>();
-        habitList.add(new Habit("Drink Water", false));
-        habitList.add(new Habit("Read for 15 Minutes", false));
-        habitList.add(new Habit("Morning Stretch", false));
-        habitList.add(new Habit("Practice Coding", false));
+        SharedPreferences prefs = getSharedPreferences("kairo_prefs", MODE_PRIVATE);
+        String json = prefs.getString("saved_habits", "");
+
+        Gson gson = new Gson();
+
+        if (!json.isEmpty()) {
+            Type type = new TypeToken<ArrayList<Habit>>() {
+            }.getType();
+            habitList = gson.fromJson(json, type);
+        }
+        else
+        {
+            habitList = new ArrayList<>();
+            habitList.add(new Habit("Drink Water", false));
+            habitList.add(new Habit("Read for 15 Minutes", false));
+            habitList.add(new Habit("Morning Stretch", false));
+            habitList.add(new Habit("Practice Coding", false));
+
+        }
 
         adapter = new HabitAdapter(habitList, this, this);
         rvHabits.setLayoutManager(new LinearLayoutManager(this));
@@ -60,6 +79,19 @@ public class MyHabitsActivity extends Activity
 
         btnAddHabit.setOnClickListener(v -> showAddEditDialog(-1));
         notificationChannel();
+    }
+
+    private void saveHabits()
+    {
+        SharedPreferences prefs = getSharedPreferences("kairo_prefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+        Gson gson = new Gson();
+        String json = gson.toJson(habitList);
+
+        editor.putString("saved_habits", json);
+        editor.apply();
+        Toast.makeText(this, "Habits Saved", Toast.LENGTH_SHORT).show();
     }
 
     private void showAddEditDialog(final int position) {
@@ -96,9 +128,11 @@ public class MyHabitsActivity extends Activity
                 h.setName(text);
                 h.setPlaceholder(false);
                 adapter.updateItem(position, h);
+                saveHabits();
                 Toast.makeText(this, "Habit updated", Toast.LENGTH_SHORT).show();
             } else {
                 adapter.addItem(new Habit(text, false));
+                saveHabits();
                 rvHabits.scrollToPosition(habitList.size() - 1);
                 Toast.makeText(this, "Habit added", Toast.LENGTH_SHORT).show();
             }
@@ -146,7 +180,11 @@ public class MyHabitsActivity extends Activity
         new AlertDialog.Builder(this)
                 .setTitle("Delete Habit")
                 .setMessage("Delete this habit?")
-                .setPositiveButton("Delete", (dialog, which) -> adapter.removeItem(position))
+                .setPositiveButton("Delete", (dialog, which) ->
+                {
+                    adapter.removeItem(position);
+                    saveHabits();
+                })
                 .setNegativeButton("Cancel", null)
                 .show();
     }
@@ -163,7 +201,7 @@ public class MyHabitsActivity extends Activity
             scheduleHabitReminder(habit.getName(), hour, minute, position);
             Toast.makeText(this, "Reminder set for " + habit.getName(), Toast.LENGTH_SHORT).show();
         }, current.get(Calendar.HOUR_OF_DAY), current.get(Calendar.MINUTE), true);
-        
+
         showAddEditDialog(position);
         dialog.show();
     }
