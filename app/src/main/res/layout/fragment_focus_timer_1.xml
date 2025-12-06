@@ -58,15 +58,13 @@
         android:layout_margin="10dp"
         android:padding="10dp"/>
 
-    <TextView
-        android:id="@+id/tvTreePlaceholder"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:text="placeholder\nfor growing\ntree animation"
-        android:gravity="center"
-        android:textSize="15sp"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="25dp"/>
+    <ImageView
+        android:id="@+id/studyGif"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitCenter" />
+
 
     <TextView
         android:id="@+id/tvTimer"
@@ -77,34 +75,41 @@
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:layout_marginTop="25dp"/>
+    
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
+        android:layout_height="18dp"
         android:layout_marginTop="200dp"
         android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:paddingHorizontal="25dp">
 
         <Button
             android:id="@+id/btnPause"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pause"
+            android:layout_marginEnd="10dp"
             android:backgroundTint="@color/darkCream"
-            android:textColor="@color/white"
-            android:layout_marginEnd="10dp"/>
+            android:text="Pause"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnStop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stop"
+            android:layout_marginStart="10dp"
             android:backgroundTint="@color/darkCream"
-            android:textColor="@color/white"
-            android:layout_marginStart="10dp"/>
+            android:text="Stop"
+            android:textColor="@color/white" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
 </LinearLayout>

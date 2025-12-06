@@ -8,9 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
 import com.example.kairo.IntroScreen;
 import com.example.kairo.R;
 
@@ -26,6 +28,14 @@ public class FocusTimer_1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_focus_timer_1, container, false);
 
         btnNewAccount = view.findViewById(R.id.btnNewAccount);
+        ImageView studyGif = view.findViewById(R.id.studyGif);
+
+        Glide.with(requireContext())
+                .asGif()
+                .load(R.drawable.study)
+                .into(studyGif);
+
+
 
         btnNewAccount.setOnClickListener(v -> {
             SharedPreferences logoutPrefs = requireActivity().getSharedPreferences("kairo_prefs", Context.MODE_PRIVATE);
