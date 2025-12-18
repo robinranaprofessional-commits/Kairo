@@ -76,13 +76,22 @@
         android:textColor="@android:color/black"
         android:layout_marginTop="25dp"/>
 
+    <SeekBar
+        android:id="@+id/seekBarTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:max="3"
+        android:progress="1" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_marginTop="80dp"
         android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:paddingHorizontal="25dp">
 
         <Button
@@ -90,20 +99,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
-            android:text="Pause"
-            android:backgroundTint="@color/darkCream"/>
+            android:backgroundTint="@color/darkCream"
+            android:text="Pause" />
 
         <Button
             android:id="@+id/btnStop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:text="Stop"
-            android:backgroundTint="@color/darkCream"/>
+            android:backgroundTint="@color/darkCream"
+            android:text="Stop" />
 
     </LinearLayout>
-
-
 
     <Button
         android:id="@+id/btnStart"
